@@ -1,0 +1,3 @@
+[user]
+	name = Ryan Dunning
+	email = ${GIT_EMAIL}

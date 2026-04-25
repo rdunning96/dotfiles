@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Secrets / credentials
+.env
+*.env
+!*.env.example
+.netrc
+.ssh/
+
+# Claude session state (never commit)
+.claude.json
+.claude.json.backup
+.claude/history.jsonl
+.claude/cache/
+.claude/sessions/
+.claude/shell-snapshots/
+.claude/stats-cache.json
+.claude/todos/
+.claude/tasks/
+.claude/plans/
+.claude/debug/
+.claude/telemetry/
+.claude/paste-cache/
+.claude/file-history/
+.claude/downloads/
+.claude/backups/
+.claude/session-env/
+.claude/ide/
+
+# Vim runtime artifacts
+.vim/pack/**/doc/tags
+*.swp
+*.swo
+
+# zsh compiled
+.zcompdump*
+.zsh_history
+.zsh_sessions/
