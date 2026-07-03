@@ -1,12 +1,44 @@
 {
-  "enabledPlugins": {
-    "supabase@claude-plugins-official": true,
-    "github@claude-plugins-official": false
+  "model": "claude-fable-5[1m]",
+  "hooks": {
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /Users/ryandunning/.claude/scripts/worklog_hook.py"
+          }
+        ]
+      }
+    ]
   },
-  "voiceEnabled": true,
   "statusLine": {
     "type": "command",
     "command": "sh /Users/ryandunning/.claude/statusline-command.sh"
   },
-  "autoMemoryDirectory": "~/.claude/global-memory"
+  "enabledPlugins": {
+    "supabase@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "worklog@user-local": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "notion@claude-plugins-official": true,
+    "expo@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "user-local": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/ryandunning/.claude/plugins/local-marketplace"
+      }
+    }
+  },
+  "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "autoMemoryDirectory": "~/.claude/global-memory",
+  "voiceEnabled": true
 }
